@@ -3,20 +3,69 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Iced Tea Dev">
-	<main>
-		<div class="flex h-screen w-full flex-col items-center justify-center">
-			<h1 class="flex gap-2 font-lexend text-5xl font-bold">
-				Hello I'm
-				<div class="p-1">
-					<div
-						class="bg-gradient-to-r from-indigo-600 to-indigo-300 bg-clip-text font-jetbrains-mono text-transparent"
-						id="typewriter"
-					>
-						IcedTeaDev
+	<main class="">
+		<nav class="flex w-full items-center justify-end gap-10 px-8 py-4">
+			<ul class="flex items-center justify-end gap-4">
+				<li class="px-1 hover:border-b hover:border-slate-100">
+					<a href="#projects">Projects</a>
+				</li>
+				<li class="px-1 hover:border-b hover:border-slate-100">Education</li>
+				<li class="px-1 hover:border-b hover:border-slate-100">Blog</li>
+			</ul>
+			<button
+				class="rounded-md border border-slate-100 p-2 font-semibold hover:bg-slate-100 hover:text-slate-950"
+				>contact me</button
+			>
+		</nav>
+		<div
+			class="flex h-[95vh] w-full flex-col items-center justify-center gap-4"
+		>
+			<div class="flex w-full flex-col items-center justify-center gap-1">
+				<h1 class="flex items-center gap-2 text-5xl font-semibold">
+					Hello I'm
+					<div class="p-1">
+						<div
+							class="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent"
+							id="typewriter"
+						>
+							IcedTeaDev
+						</div>
+					</div>
+					👋
+				</h1>
+				<p class="text-xl">full-stack developer</p>
+			</div>
+			<button
+				class="rounded-md border border-slate-100 p-2 font-semibold hover:bg-slate-100 hover:text-slate-950"
+			>
+				Learn More
+			</button>
+		</div>
+		<div class="flex flex-col gap-8 px-8" id="projects">
+			<div class="flex items-center justify-center">
+				<h2 class="text-4xl font-semibold">projects</h2>
+			</div>
+			<div class="grid grid-cols-2 justify-items-center p-8">
+				<img
+					src="../../public/HimaCodeExample.png"
+					alt="Hima Code Example"
+					class="w-3/4 rounded-lg"
+				/>
+
+				<div class="max-w-lg">
+					<div class="flex flex-col gap-4 pt-2">
+						<div class="flex flex-col gap-1">
+							<h3 class="text-3xl font-semibold">// Hima High School</h3>
+							<h4 class="text-semibold">Cardano NFT Project</h4>
+						</div>
+						<p>
+							I was the only developer on this project. I handled everything
+							from the website to the database. I developed minting & art
+							generation scripts, discord bots, and more.
+						</p>
 					</div>
 				</div>
-				👋
-			</h1>
+			</div>
 		</div>
 	</main>
 </Layout>
@@ -71,17 +120,18 @@ import Layout from "../layouts/Layout.astro";
 			background-image: none;
 		}
 	}
+
 	@keyframes show {
 		0% {
 			opacity: 0;
 		}
 		100% {
 			border-right: 3px solid white;
-
-			@apply bg-gradient-to-r from-indigo-600 to-indigo-300 bg-clip-text font-jetbrains-mono text-transparent;
+			@apply bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent;
 			opacity: 1;
 		}
 	}
+
 	@keyframes typing2 {
 		0% {
 			width: 0ch;
