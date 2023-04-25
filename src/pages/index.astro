@@ -7,38 +7,91 @@ import Layout from "../layouts/Layout.astro";
 		<div class="flex h-screen w-full flex-col items-center justify-center">
 			<h1 class="flex gap-2 font-lexend text-5xl font-bold">
 				Hello I'm
-				<div class="bg-slate-950 p-1">
+				<div class="p-1">
 					<div
 						class="bg-gradient-to-r from-indigo-600 to-indigo-300 bg-clip-text font-jetbrains-mono text-transparent"
 						id="typewriter"
 					>
-						Iced Tea Dev
+						IcedTeaDev
 					</div>
 				</div>
+				👋
 			</h1>
 		</div>
 	</main>
 </Layout>
 <style>
+	/* 140ms per character */
+	/* 760ms delay */
 	#typewriter {
-		width: 12ch;
-		animation: typing 1500ms steps(12), blink 0.5s step-end infinite alternate;
+		width: 10ch;
+		animation: typing 3800ms steps(10) forwards,
+			blink 0.5s step-end infinite alternate,
+			typing2 1600ms steps(6) 3800ms forwards, hide-text 1ms 3800ms forwards;
+
 		white-space: nowrap;
 		overflow: hidden;
 		border-right: 3px solid white;
+		position: relative;
+	}
+
+	#typewriter::after {
+		content: "Archer";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 6ch;
+		animation: show 1ms 3800ms forwards, typing2 1600ms 3800ms steps(6) forwards,
+			blink 0.5s 3800ms step-end infinite alternate;
 	}
 
 	@keyframes typing {
 		0% {
 			width: 0ch;
 		}
+		35% {
+			width: 10ch;
+		}
+		65% {
+			width: 10ch;
+		}
 		100% {
-			width: 12ch;
+			width: 0ch;
 		}
 	}
 
-	#typewriter::after {
-		content: "Archer";
+	@keyframes hide-text {
+		to {
+			color: transparent;
+			background-clip: unset;
+			background-image: none;
+		}
+	}
+	@keyframes show {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			border-right: 3px solid white;
+
+			@apply bg-gradient-to-r from-indigo-600 to-indigo-300 bg-clip-text font-jetbrains-mono text-transparent;
+			opacity: 1;
+		}
+	}
+	@keyframes typing2 {
+		0% {
+			width: 0ch;
+		}
+		47.5% {
+			width: 0ch;
+		}
+		100% {
+			width: 6ch;
+		}
 	}
 
 	@keyframes blink {
