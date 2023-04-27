@@ -1,38 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HimaCodeExample from "../../public/HimaCodeExample.png";
+import HimaCodeExample from "/HimaCodeExample.png";
+import Nav from "../components/Nav.jsx";
+import "../styles/hero.css";
 ---
 
 <Layout title="Iced Tea Dev">
 	<main class="">
-		<nav class="flex w-full items-center justify-end gap-10 px-8 py-4">
-			<ul class="flex items-center justify-end gap-4">
-				<li class="px-1 hover:border-b hover:border-slate-100">
-					<a href="#projects">Projects</a>
-				</li>
-				<li class="px-1 hover:border-b hover:border-slate-100">Education</li>
-				<li class="px-1 hover:border-b hover:border-slate-100">Blog</li>
-			</ul>
-			<button
-				class="rounded-md border border-slate-100 p-2 font-semibold hover:bg-slate-100 hover:text-slate-950"
-				>contact me</button
-			>
-		</nav>
+		<Nav client:load />
+
 		<div
 			class="flex h-[95vh] w-full flex-col items-center justify-center gap-4"
 		>
 			<div class="flex w-full flex-col items-center justify-center gap-1">
-				<h1 class="flex items-center gap-2 text-5xl font-semibold">
-					Hello I'm
-					<div class="p-1">
-						<div
-							class="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent"
-							id="typewriter"
-						>
-							IcedTeaDev
+				<h1
+					class="flex flex-col items-center gap-2 text-5xl font-semibold sm:flex-row"
+				>
+					<div>Hello I'm</div>
+					<div className="flex flex-row">
+						<div class="p-1">
+							<div
+								class="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent"
+								id="typewriter"
+							>
+								IcedTeaDev
+							</div>
 						</div>
 					</div>
-					👋
 				</h1>
 				<p class="text-xl">I'm a full-stack developer</p>
 			</div>
@@ -70,84 +64,4 @@ import HimaCodeExample from "../../public/HimaCodeExample.png";
 		</div>
 	</main>
 </Layout>
-<style>
-	/* 140ms per character */
-	/* 760ms delay */
-	#typewriter {
-		width: 10ch;
-		animation: typing 3800ms steps(10) forwards,
-			blink 0.5s step-end infinite alternate,
-			typing2 1600ms steps(6) 3800ms forwards, hide-text 1ms 3800ms forwards;
-
-		white-space: nowrap;
-		overflow: hidden;
-		border-right: 3px solid white;
-		position: relative;
-	}
-
-	#typewriter::after {
-		content: "Archer";
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		overflow: hidden;
-		white-space: nowrap;
-		width: 6ch;
-		animation: show 1ms 3800ms forwards, typing2 1600ms 3800ms steps(6) forwards,
-			blink 0.5s 3800ms step-end infinite alternate;
-	}
-
-	@keyframes typing {
-		0% {
-			width: 0ch;
-		}
-		35% {
-			width: 10ch;
-		}
-		65% {
-			width: 10ch;
-		}
-		100% {
-			width: 0ch;
-		}
-	}
-
-	@keyframes hide-text {
-		to {
-			color: transparent;
-			background-clip: unset;
-			background-image: none;
-		}
-	}
-
-	@keyframes show {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			border-right: 3px solid white;
-			@apply bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent;
-			opacity: 1;
-		}
-	}
-
-	@keyframes typing2 {
-		0% {
-			width: 0ch;
-		}
-		47.5% {
-			width: 0ch;
-		}
-		100% {
-			width: 6ch;
-		}
-	}
-
-	@keyframes blink {
-		50% {
-			border-color: transparent;
-		}
-	}
-</style>
+<style></style>
