@@ -14,10 +14,10 @@ const Nav = () => {
 						<div className="grid grid-cols-2 gap-4">
 							<div>
 								<img
-									src={
-										// (hoveredProject == "HIMA High School" && himaNav) ||
-										"https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-									}
+									// src={
+									// 	(hoveredProject == "HIMA High School" && himaNav) ||
+									// }
+									src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
 									alt="Image for Project"
 									className="rounded"
 								/>
