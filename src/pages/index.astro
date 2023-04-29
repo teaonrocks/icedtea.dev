@@ -1,14 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HimaCodeExample from "/HimaCodeExample.png";
-import Nav from "../components/Nav.jsx";
+import { Nav } from "../components/Nav";
 import "../styles/hero.css";
 ---
 
 <Layout title="Iced Tea Dev">
 	<main class="">
 		<Nav client:load />
-
 		<div
 			class="flex h-[95vh] w-full flex-col items-center justify-center gap-4"
 		>
@@ -20,7 +19,7 @@ import "../styles/hero.css";
 					<div className="flex flex-row">
 						<div class="p-1">
 							<div
-								class="bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent"
+								class="bg-gradient-to-tr from-[#21D4FD] to-[#B721FF] bg-clip-text font-jetbrains-mono text-transparent"
 								id="typewriter"
 							>
 								IcedTeaDev
@@ -36,32 +35,7 @@ import "../styles/hero.css";
 				Contact Me
 			</button>
 		</div>
-		<div class="flex flex-col gap-8 px-8" id="projects">
-			<div class="flex items-center justify-center">
-				<h2 class="text-4xl font-semibold">projects</h2>
-			</div>
-			<div class="grid grid-cols-2 justify-items-center p-8">
-				<img
-					src={HimaCodeExample}
-					alt="Hima Code Example"
-					class="w-3/4 rounded-lg"
-				/>
-
-				<div class="max-w-lg">
-					<div class="flex flex-col gap-4 pt-2">
-						<div class="flex flex-col gap-1">
-							<h3 class="text-3xl font-semibold">// Hima High School</h3>
-							<h4 class="text-semibold">Cardano NFT Project</h4>
-						</div>
-						<p>
-							I was the only developer on this project. I handled everything
-							from the website to the database. I developed minting & art
-							generation scripts, discord bots, and more.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="flex flex-col gap-8 px-8" id="projects"></div>
 	</main>
 </Layout>
 <style></style>

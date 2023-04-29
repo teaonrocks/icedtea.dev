@@ -55,7 +55,7 @@
 	}
 	100% {
 		border-right: 3px solid white;
-		@apply bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text font-jetbrains-mono text-transparent;
+		@apply bg-gradient-to-tr from-[#21D4FD] to-[#B721FF] bg-clip-text font-jetbrains-mono text-transparent;
 		opacity: 1;
 	}
 }
