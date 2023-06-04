@@ -1,41 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HimaCodeExample from "/HimaCodeExample.png";
-import { Nav } from "../components/Nav";
-import "../styles/hero.css";
+import Card from "../components/card.astro";
 ---
 
 <Layout title="Iced Tea Dev">
-	<main class="">
-		<Nav client:load />
-		<div
-			class="flex h-[95vh] w-full flex-col items-center justify-center gap-4"
-		>
-			<div class="flex w-full flex-col items-center justify-center gap-1">
-				<h1
-					class="flex flex-col items-center gap-2 text-5xl font-semibold sm:flex-row"
-				>
-					<div>Hello I'm</div>
-					<div className="flex flex-row">
-						<div class="p-1">
-							<div
-								class="bg-gradient-to-tr from-[#21D4FD] to-[#B721FF] bg-clip-text font-jetbrains-mono text-transparent"
-								id="typewriter"
-							>
-								IcedTeaDev
-							</div>
-						</div>
-					</div>
-				</h1>
-				<p class="text-xl">I'm a full-stack developer</p>
+	<main class="min-h-screen container mx-auto lg:px-60 md:px-40 px-10 text-neutral-200">
+		<div>
+			<div class="border-b border-b-neutral-500 p-2 text-neutral-500 text-sm mb-10">
+				Iced Tea @iceonrocks
 			</div>
-			<button
-				class="rounded-md border border-slate-100 p-2 font-semibold hover:bg-slate-100 hover:text-slate-950"
-			>
-				Contact Me
-			</button>
+			<div class="px-2">
+				Hello, I'm <span class="font-semibold">Archer Chua</span> aka <span class="font-semibold">Iced Tea</span>. I'm a 20 y/o in college. I like drinking tea and building cool stuff. I enjoy web development and I'm currently learning React and NextJS.
+			</div>
+			<div class="px-2">
+				I'm currently building a task management tool and an AI for predicting strawberry growth for my internship.
+			</div>
 		</div>
-		<div class="flex flex-col gap-8 px-8" id="projects"></div>
+		<div class="border-b border-b-neutral-500 my-10 p-2 text-neutral-500 text-sm">
+			Projects
+		</div>
+		<div class="grid grid-cols-3 gap-4 px-2">
+			<Card title="Hima Discord Bots" description="Discord bots and an API built for the Hima NFT project, which I co-founded. Built with PyCord, FastAPI and SQLite"/>
+			<Card title="icedtea.dev" description="Boring personal site. Built with astro and tailwind"/>
+			<Card title="bentoo.dev" description="Old boring personal site. Built with NextJS, Tailwind and DaisyUI"/>
+		</div>
 	</main>
 </Layout>
 <style></style>
