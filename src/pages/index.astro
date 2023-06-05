@@ -1,29 +1,87 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/card.astro";
+import Email from "../components/icons/email.astro";
+import Github from "../components/icons/github.astro";
+import LinkedIn from "../components/icons/linkedin.astro";
+import Twitter from "../components/icons/twitter.astro";
+import Toast from "../components/toast.astro";
 ---
 
-<Layout title="Iced Tea Dev">
-	<main class="min-h-screen container mx-auto lg:px-60 md:px-40 px-10 py-2 text-neutral-200">
+<Layout title="Iced Tea">
+	<main
+		class="min-h-screen container mx-auto lg:px-60 md:px-40 px-2 pt-2 text-neutral-200"
+	>
+		<Toast text="Copied to clipboard" />
 		<div>
-			<div class="border-b border-b-neutral-500 p-2 font-bold text-neutral-50 mb-10">
-				Iced Tea <span class="text-sm text-neutral-500 font-normal">@iceonrocks</span>
+			<div
+				class="border-b border-b-neutral-500 px-2 font-bold text-neutral-50 mb-10 py-1"
+			>
+				<div class="flex items-end justify-between">
+					<div class="flex items-center gap-2">
+						<span>Iced Tea</span>
+						<span class="text-sm text-neutral-500 font-normal"
+							>@iceonrocks</span
+						>
+					</div>
+					<div class="flex gap-2 items-end">
+						<Twitter />
+						<Github />
+						<LinkedIn />
+						<Email />
+					</div>
+				</div>
 			</div>
 			<div class="px-2 text-neutral-300">
-				Hello, I'm <span class="font-bold text-neutral-50">Archer Chua</span> aka <span class="font-bold text-neutral-50">Iced Tea</span>. I'm a 20 y/o in college. I drink tea and build cool stuff. I enjoy web development and I'm currently learning React and NextJS.
+				Hello, I'm <span class="font-semibold text-neutral-50"
+					>Archer Chua</span
+				> aka <span class="font-semibold text-neutral-50">Iced Tea</span
+				>. I'm a 20 y/o in college, I <span
+					class="font-semibold text-neutral-50">drink tea</span
+				> and <span class="font-semibold text-neutral-50"
+					>build cool stuff</span
+				>. I enjoy <span class="font-semibold text-neutral-50"
+					>web development</span
+				> and I'm currently learning <span
+					class="font-semibold text-neutral-50">React</span
+				> and <span class="font-semibold text-neutral-50">NextJS</span>.
 			</div>
-			<br>
+			<br />
 			<div class="px-2 text-neutral-300">
-				I'm currently building a <span class="font-bold text-neutral-50">task management tool</span> and an <span class="font-bold text-neutral-50">AI for predicting strawberry growth</span> for my internship.
+				I'm currently building a <span
+					class="font-semibold text-neutral-50"
+					>task management tool</span
+				> and an <span class="font-semibold text-neutral-50"
+					>AI for predicting strawberry growth</span
+				> for my internship.
 			</div>
 		</div>
-		<div class="border-b border-b-neutral-500 my-10 p-2 font-bold text-neutral-50">
+		<div
+			class="border-b border-b-neutral-500 my-10 px-2 font-bold text-neutral-50 py-1"
+		>
 			Projects
 		</div>
-		<div class="grid lg:grid-cols-3 gap-4 px-2 md:grid-cols-2">
-			<Card title="Hima Discord Bots" description="Discord bots and an API built for the Hima NFT project, which I co-founded. Built with PyCord, FastAPI and SQLite"/>
-			<Card title="icedtea.dev" description="Boring personal site. Built with Astro and Tailwind"/>
-			<Card title="bentoo.dev" description="Old boring personal site. Built with NextJS, Tailwind and DaisyUI"/>
+		<div class="grid lg:grid-cols-3 gap-4 px-2 pt-2 md:grid-cols-2">
+			<Card
+				href="https://github.com/teaonrocks/icedtea.dev/"
+				title="icedtea.dev"
+				description="Boring personal site. Built with Astro and Tailwind."
+			/>
+			<Card
+				href="https://github.com/teaonrocks/Hima-discord/"
+				title="Hima Discord Bots"
+				description="Discord bots and an API built for the Hima NFT project, which I co-founded. Built with PyCord, FastAPI and SQLite."
+			/>
+			<Card
+				href="https://github.com/teaonrocks/Hima-art-gen"
+				title="Hima Art Gen"
+				description="Python script that allows you to generate NFT art based on the rarity of different layers. Build with PIL, Pinata IPFS."
+			/>
+			<Card
+				href="https://github.com/teaonrocks/Hima-minter"
+				title="Hima Minter"
+				description="Minting script for the cardano blockchain. Built with Python, Cardano CLI, Koios API."
+			/>
 		</div>
 	</main>
 </Layout>

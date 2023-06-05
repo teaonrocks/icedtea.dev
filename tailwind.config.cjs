@@ -6,6 +6,7 @@ module.exports = {
 			fontFamily: {
 				lexend: ["Lexend", "sans-serif"],
 				"jetbrains-mono": ["JetBrains Mono", "monospace"],
+				"public-sans": ["Public Sans", "sans-serif"],
 			},
 		},
 	},
