@@ -14,25 +14,25 @@ import Toast from "../components/toast.astro";
 	>
 		<Toast text="Copied to clipboard" />
 		<div>
-			<div
+			<header
 				class="border-b border-b-neutral-500 px-2 font-bold text-neutral-50 mb-10 py-1"
 			>
 				<div class="flex items-end justify-between">
-					<div class="flex items-center gap-2">
+					<h1 class="flex items-center gap-2">
 						<span>Iced Tea</span>
 						<span class="text-sm text-neutral-500 font-normal"
 							>@iceonrocks</span
 						>
-					</div>
-					<div class="flex gap-2 items-end">
+					</h1>
+					<nav aria-label="Social Links" class="flex gap-2 items-end">
 						<Twitter />
 						<Github />
 						<LinkedIn />
 						<Email />
-					</div>
+					</nav>
 				</div>
-			</div>
-			<div class="px-2 text-neutral-300">
+			</header>
+			<p class="px-2 text-neutral-300">
 				Hello, I'm <span class="font-semibold text-neutral-50"
 					>Archer Chua</span
 				> aka <span class="font-semibold text-neutral-50">Iced Tea</span
@@ -45,23 +45,26 @@ import Toast from "../components/toast.astro";
 				> and I'm currently learning <span
 					class="font-semibold text-neutral-50">React</span
 				> and <span class="font-semibold text-neutral-50">NextJS</span>.
-			</div>
+			</p>
 			<br />
-			<div class="px-2 text-neutral-300">
+			<p class="px-2 text-neutral-300">
 				I'm currently building a <span
 					class="font-semibold text-neutral-50"
 					>task management tool</span
 				> and an <span class="font-semibold text-neutral-50"
 					>AI for predicting strawberry growth</span
 				> for my internship.
-			</div>
+			</p>
 		</div>
-		<div
+		<h2
 			class="border-b border-b-neutral-500 my-10 px-2 font-bold text-neutral-50 py-1"
 		>
 			Projects
-		</div>
-		<div class="grid lg:grid-cols-3 gap-4 px-2 pt-2 md:grid-cols-2">
+		</h2>
+		<section
+			aria-label="Projects"
+			class="grid lg:grid-cols-3 gap-4 px-2 pt-2 md:grid-cols-2"
+		>
 			<Card
 				href="https://github.com/teaonrocks/icedtea.dev/"
 				title="icedtea.dev"
@@ -92,14 +95,19 @@ import Toast from "../components/toast.astro";
 				title="Download Organiser"
 				description="A script that organises your downloads folder by its date. Built with Python."
 			/>
-		</div>
-
-		<div
+		</section>
+		<h2
+			class="border-b border-b-neutral-500 my-10 px-2 font-bold text-neutral-50 py-1"
+		>
+			Blog
+		</h2>
+		<div class="px-2 text-neutral-500">Coming soon...</div>
+		<footer
 			class="border-t border-t-neutral-500 my-10 px-2 text-sm text-neutral-500 py-1 flex justify-between"
 		>
 			<div>Archer Chua 2023.</div>
 			<div>Heres a cookie for making it this far 🍪</div>
-		</div>
+		</footer>
 	</main>
 </Layout>
 <style></style>
